@@ -31,6 +31,7 @@ $((events, handler) => {
     }).fail((jqxhr, textStatus, error) => {
         let err = `${textStatus}, ${error}`;
         $('#errorInfo').text(`Couldn't load countries list: ${err}. Try again later.`);
+        $('#error').show();
     });
     const getInfo = () => {
         let selCity = $('#cities').val();
@@ -64,8 +65,8 @@ $((events, handler) => {
         })
             .fail((jqxhr, textStatus, error) => {
                 let err = `${textStatus}, ${error}`;
-                $('#error').show();
                 $('#errorInfo').text(`Couldn't load details about selected country: ${err}`);
+                $('#error').show();
 
             });
     }
