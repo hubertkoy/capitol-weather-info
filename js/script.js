@@ -8,7 +8,7 @@ $(window).on('load', function () {
 
 $((events, handler) => {
     $('#error').hide();
-    $.getJSON('http://api.geonames.org/countryInfoJSON?formatted=true&lang=en&style=full&username=hubertkoy', (data) => {
+    $.getJSON('https://secure.geonames.org/countryInfoJSON?formatted=true&lang=en&style=full&username=hubertkoy', (data) => {
         // create empty array
         const cities = [];
         // check countries for capital empty name
